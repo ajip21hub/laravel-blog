@@ -1,0 +1,38 @@
+{
+    "name": "ngodink/laravel-blog",
+    "description": "Laravel blogging backend system",
+    "keywords": [
+        "laravel",
+        "blog",
+        "blogging",
+        "cms"
+    ],
+    "homepage": "https://github.com/ngodink/laravel-blog",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rasyid Ridho",
+            "email": "ngodink@gmail.com",
+            "homepage": "http://ngodink.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Ngodink\\Blog\\": "src/Blog/"
+        }
+    },
+    "require": {
+        "php" : "^7.2.5",
+        "illuminate/container": "^5.8|^6.0|^7.0",
+        "illuminate/database": "^5.8|^6.0|^7.0"
+    },
+    "extra":{
+        "laravel":{
+            "providers":[
+                "Ngodink\\Blog\\BlogServiceProvider"
+            ]
+        }
+    }
+}
