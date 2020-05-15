@@ -111,4 +111,4 @@ $category = BlogCategory::findBySlug('updates');
 - [Rasyid Ridho](https://github.com/ngodink)
 
 ## License
-MIT. Please see the [license file](license.md) for more information.
+MIT. Please see the [license file](LICENSE.md) for more information.
