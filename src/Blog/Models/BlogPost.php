@@ -144,6 +144,20 @@ class BlogPost extends Model
         $this->metas()->updateOrCreate(['key' => $key], ['content' => $value]);
         return $this;
     }
+    
+    /**
+     * Querying the default metas.
+     */
+    public function insertDefaultMetas() {
+        $class = config('blog.post_meta_class');
+        $metas = [];
+        foreach ((new $class())->defaultMetas($this) as $key => $content) {
+            $metas[] = compact('key', 'content');
+        }
+
+        $this->metas()->createMany($metas);
+        return $this;
+    }
 
     /**
      * Scope where tag is.

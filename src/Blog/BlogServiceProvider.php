@@ -5,6 +5,9 @@ namespace Ngodink\Blog;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
 
+use Ngodink\Blog\Models\BlogPost;
+use Ngodink\Blog\Observers\BlogPostObserver;
+
 class BlogServiceProvider extends ServiceProvider
 {
     /**
@@ -25,5 +28,16 @@ class BlogServiceProvider extends ServiceProvider
 
         // Load migrations
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+
+        // Load observers
+        $this->registerObservers();
+    }
+
+    /**
+     * Register the observers.
+     */
+    public function registerObservers()
+    {
+        BlogPost::observe(BlogPostObserver::class);
     }
 }

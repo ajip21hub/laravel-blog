@@ -8,7 +8,6 @@
         "cms"
     ],
     "homepage": "https://github.com/ngodink/laravel-blog",
-    "type": "project",
     "license": "MIT",
     "authors": [
         {

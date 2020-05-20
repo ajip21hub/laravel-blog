@@ -32,7 +32,7 @@ class CreateBlogsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create($this->prefix.'post_meta', function (Blueprint $table) {
+        Schema::create($this->prefix.'post_metas', function (Blueprint $table) {
             $table->unsignedInteger('post_id');
             $table->string('key');
             $table->text('content')->nullable();
@@ -101,7 +101,7 @@ class CreateBlogsTable extends Migration
         Schema::dropIfExists($this->prefix.'categories');
         Schema::dropIfExists($this->prefix.'post_comments');
         Schema::dropIfExists($this->prefix.'post_likes');
-        Schema::dropIfExists($this->prefix.'post_meta');
+        Schema::dropIfExists($this->prefix.'post_metas');
         Schema::dropIfExists($this->prefix.'posts');
     }
 }

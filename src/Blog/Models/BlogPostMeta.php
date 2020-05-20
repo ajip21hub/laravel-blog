@@ -20,7 +20,7 @@ class BlogPostMeta extends Model
      * The attributes that are mass assignable.
      */
     protected $fillable = [
-        'key', 'content'
+        'post_id', 'key', 'content'
     ];
 
     /**
@@ -41,7 +41,7 @@ class BlogPostMeta extends Model
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
-        $this->table = config('blog.table.prefix', 'blog_').'post_meta';
+        $this->table = config('blog.table.prefix', 'blog_').'post_metas';
     }
 
     /**

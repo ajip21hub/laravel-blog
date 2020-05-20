@@ -7,7 +7,7 @@ Beautiful laravel backend blog system, including migrations, models, and easy wr
 	``` bash
 	composer require ngodink/laravel-blog
 	```
-2. The service provider will automatically get registered. Or you may manually add the service provider in your `config/app.php` file:
+2. The service provider will **automatically get registered**. Or you may manually add the service provider in your `config/app.php` file:
 
    ``` php
    'providers' => [
